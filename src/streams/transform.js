@@ -12,7 +12,6 @@ const __dirname = dirname(__filename);
 const transform = async () => {
  const tra = new Transform({
     transform(shunk, _ , callback){
-        // const revers = shunk.toString().split('').reverse().join('');
        callback(null, String(shunk).split('').reverse().join(''));
         
     }
